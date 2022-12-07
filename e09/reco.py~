@@ -1,0 +1,45 @@
+import numpy as np
+import sys,os
+
+
+#definisco la classe hit
+class Hit():
+    
+ def __init__(self,modulo,sensore,time):
+        self.modulo = modulo
+        self.sensore = sensore 
+        self.time = time
+
+class Event():
+ def __init__(self,nhit,tfirst,tlast,durata,hits):
+        self.nhit = nhit
+        self.tfirst = tfirst
+        self.tfirst = tlast
+        self.durata=tlast-tfirst
+        self.hits=np.empty([])
+
+#metodo che aggiorna l'oggetto event
+
+def aggiorna_event()
+    n=len(array)
+    self.nhit=n
+    for i in array
+        self.hits=np.append(self.hits,i)
+    self.tfirst= array[0]
+    self.tlast=array[n]
+    self.durata=array[n]-array[0]
+
+def stampa():
+    print('Numero di hit totali /n', self.nhit)
+    print('Time Stamp primo Hit /n', self.tfirst)
+    print('Time Stamp ultimo Hit /n', self.tlast)
+    print('Durata temporale /n', self.durata)
+    print('Array di tutti gli Hit /n', self.hits)
+
+
+    
+    
+
+    
+    
+    
