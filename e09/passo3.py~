@@ -1,0 +1,36 @@
+import reco as rc
+import numpy as np
+import pandas as pd
+
+
+
+#leggo i file
+data1=pd.read_csv('hit_times_M0.csv')
+data2=pd.read_csv('hit_times_M1.csv')
+data3=pd.read_csv('hit_times_M2.csv')
+data4=pd.read_csv('hit_times_M3.csv')
+
+#rinomino le colonne
+modulo1=data1['mod_id']
+sensore1=data1['det_id']
+tempo1=data1['hit_time']
+
+modulo2=data2['mod_id']
+sensore2=data2['det_id']
+tempo2=data2['hit_time']
+
+modulo3=data3['mod_id']
+sensore3=data3['det_id']
+tempo3=data3['hit_time']
+
+modulo4=data4['mod_id']
+sensore4=data4['det_id']
+tempo4=data4['hit_time']
+
+hitarray=np.empty(0)
+
+for i in range (len(modulo1)):
+      hitarray=np.append(hitarray,np.array([(rc.Hit(modulo1[i],sensore1[i],tempo1[i]))])#l'uscita rappresenta un data frame devo trasformarlo in array
+
+print(hitarray[0])
+

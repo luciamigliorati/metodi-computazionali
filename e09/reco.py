@@ -9,7 +9,11 @@ class Hit():
         self.modulo = modulo
         self.sensore = sensore 
         self.time = time
-
+ def __lt__(self, other):
+        return self.time < other.time
+ def __sub__(self,other):
+     return self.time - other.time
+       
 class Event(): #il costruttore me lo crea vuoto
  def __init__(self):
         self.nhit = 0
@@ -20,7 +24,7 @@ class Event(): #il costruttore me lo crea vuoto
 
 #metodo che aggiorna l'oggetto event
 
-def aggiorna_event(h)
+def aggiorna_event(h):
     self.nhit=self.nhit+1
     self.hits=np.append(self.hits,h)
     self.tfirst=self.hits[0].time
