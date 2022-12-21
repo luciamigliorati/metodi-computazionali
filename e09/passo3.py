@@ -2,6 +2,8 @@ import reco as rc
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from reco import Event
+
 
 #PASSO 3
 
@@ -67,8 +69,20 @@ plt.show()
 
 
 #in sublot per mettere scala log ax.set 
-
-
+eventArray=np.empty(0)
+def dividiEvent(hitordinati):
+    for i in len(hitordinati-1):
+         diff= hitordinati[i+1]-hitordinati[i]
+         if (diff > 10**2.2):
+          eventArray=np.append(eventArray,Event)#se non importi Event devi specificare reco.Event 
+          eventArray[-1].aggiorna_event(hitordinati[i])#ultimo
+         else:
+          eventArray[-1].aggiorna_event(hitordinati[i])
+      
+                                    
+               
+          
+      
 
 
 
